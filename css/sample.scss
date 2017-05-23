@@ -439,3 +439,184 @@ h1{
   margin: 0;
   padding: 0;
 }
+
+
+
+/* news.html
+----------------------------------------------------------------*/
+
+
+/* #sub_cover
+----------------------------------------------------------------*/
+
+#sub_cover {
+    text-align: center;
+    padding: 80px 0;
+
+    background-image: url("../images/news/sub_cover.jpg");
+    background-size: cover;
+    
+     //retina_bg
+    @media screen and (-webkit-min-device-pixel-ratio:2),
+                      (min-resolution: 2dppx){
+        background-image: url("../images/news/sub_cover@2x.jpg");
+    }
+    
+    h2{
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-size: 3.2rem;
+        letter-spacing: 0.2rem;
+    }
+    
+    //PC表示
+    @media (min-width:550px) {
+        
+        text-align: left;
+        height: 40px;
+        padding: 80px 0;
+    }
+}
+// #sub_cover
+
+/* #contents
+----------------------------------------------------------------*/
+
+#contents{
+    
+    padding-top: 20px;
+    
+    
+    @media (min-width: 550px){
+        
+        padding: 35px 0 70px 0;
+        
+        .container{
+            padding: 0;
+        }
+    }
+    // min-width: 550px
+    
+    h2{
+        
+        @include fontsize(26);
+        color: $blue1;
+        padding: 15px 0 10px 0;
+        font-size: 2rem;
+        font-weight: bold;
+        border-bottom: solid 3px $blue1;
+    }
+    
+    .news_li{
+        
+        li{
+            list-style: none;
+            @include fontsize(15);
+            margin-bottom: 10px;
+            
+            span{
+                color: $blue1;
+                font-weight: bold;
+                display: block;
+                margin-bottom: 3px;
+            }
+        }
+        // li
+    }
+    // .news_li
+    
+    @media (min-width: 550px){
+        
+        #main {
+            padding-right: 20px;
+            
+            h2 {
+                
+                //text-align: center;
+                @include fontsize(20);
+                //color: $blue1;
+                padding: 0 0 20px 0;
+                margin: 0 0 20px 0;
+                //letter-spacing: 0.2rem;
+            }
+            
+            .news_li{
+                
+                li{
+                    //list-style: none;
+                    @include fontsize(15);
+                    padding-bottom: 5px;
+                
+                    span{
+                        //color: $bllue1;
+                        //font-weight: bold;
+                        display: inline;
+                        padding-right: 10px;
+                        margin-bottom: 0;
+                    }
+                    
+                }
+                //li
+                
+            }
+            // .news_li
+        }
+        //#main
+    }
+    // min-width550px
+    
+    #sidebar {
+    
+        .pc_sidemenu{
+            
+            display: none;
+            
+            h3{
+                background-color: $gray_blue;
+                color: $blue1;
+                padding: 15px;
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+                font-weight: bold;
+                margin: 0;
+            }
+            
+            ul{
+                list-style:none;
+                margin-bottom: 25px;
+            
+                li{
+                    padding: 10px 10px 10px 20px;
+                    border-bottom: solid 1px #e5e5e5;
+                    background-image: url("../images/news/side_arrow.png");
+                    background-size: 4px 8px;
+                    background-repeat: no-repeat;
+                    background-position: 8px 50%; 
+                    
+                    //ここからretina_bg
+                    @media screen and (-webkit-min-device-pixel-ratio:2),
+                                      (min-resolution: 2dppx){
+                                          
+                        background-image: url("../images/news/side_arrow@2x.png");
+                    }
+                    // retina_bg
+                    
+                    a{
+                        text-decoration: none;
+                    }
+                 }
+                 //li
+            }
+            //ul
+            
+            @media (min-width: 550px){
+                display: block;
+            }
+        }
+        // .pcsidemenu
+    }
+    // #sidebar
+}
+// #contents
