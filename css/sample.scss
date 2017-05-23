@@ -451,7 +451,8 @@ h1{
 
 #sub_cover {
     text-align: center;
-    padding: 80px 0;
+    padding: 40px 0;
+    height: 20px;
 
     background-image: url("../images/news/sub_cover.jpg");
     background-size: cover;
@@ -467,8 +468,14 @@ h1{
         text-align: center;
         font-weight: bold;
         color: white;
-        font-size: 3.2rem;
+        font-size: 1.6rem;
         letter-spacing: 0.2rem;
+        
+        //PC表示
+        @media (min-width:550px) {
+        
+        font-size: 3.2rem;
+        }
     }
     
     //PC表示
@@ -486,7 +493,7 @@ h1{
 
 #contents{
     
-    padding-top: 20px;
+    padding: 20px 0 0 0;
     
     
     @media (min-width: 550px){
@@ -503,8 +510,8 @@ h1{
         
         @include fontsize(26);
         color: $blue1;
-        padding: 15px 0 10px 0;
-        font-size: 2rem;
+        padding: 0 0 10px 0;
+        font-size: 1.5rem;
         font-weight: bold;
         border-bottom: solid 3px $blue1;
     }
@@ -536,6 +543,7 @@ h1{
                 
                 //text-align: center;
                 @include fontsize(20);
+                font-size: 2rem;
                 //color: $blue1;
                 padding: 0 0 20px 0;
                 margin: 0 0 20px 0;
@@ -574,7 +582,7 @@ h1{
             display: none;
             
             h3{
-                background-color: $gray_blue;
+                background-color: #f3f9fb;
                 color: $blue1;
                 padding: 15px;
                 font-size: 1.4rem;
@@ -590,6 +598,7 @@ h1{
                 li{
                     padding: 10px 10px 10px 20px;
                     border-bottom: solid 1px #e5e5e5;
+                    margin: 0;
                     background-image: url("../images/news/side_arrow.png");
                     background-size: 4px 8px;
                     background-repeat: no-repeat;
@@ -620,3 +629,43 @@ h1{
     // #sidebar
 }
 // #contents
+
+
+/* company.html
+----------------------------------------------------------------*/
+
+/* #contents
+----------------------------------------------------------------*/
+
+#contents{
+    
+    #main{
+        
+        .company_title{
+            margin: 0;
+            padding-top: 0;
+            padding-bottom: 15px;
+            
+            @media (min-width: 550px){
+                padding-bottom: 20px;
+            }
+        }
+        tr{
+            color: #626262;
+            
+            th{
+                padding: 20px 20px 20px 0;
+                font-size: 1.4rem;
+                border-bottom: 1px solid #e1e1e1;
+            }
+            td{
+                padding: 20px 0 20px 0;
+                font-size: 1.4rem;
+                border-bottom: 1px solid #e1e1e1;
+            }
+        }
+        
+    }
+}
+
+//#main
